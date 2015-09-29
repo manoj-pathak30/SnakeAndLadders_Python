@@ -2,19 +2,19 @@ from random import randint
 import time
 
 print("***** Snakes and Ladders Game *****")
-
 """creating ladder and snakes"""
 ladders = {3:22,5:8,11:26,20:29}
 snakes  = {27:1,19:7,21:9,17:4}
+totalColumn = 30
 
 """Initialising players and their positions"""
-players = {"Manoj":0,"Vansh":0,"Manish":0,"Saket":0}
+players = {"Manoj":0,"Vansh":0,"Manish":0,"Saket":0,"Anoop":0}
 
 def roll_dice(name, curPos):
     d = randint(1,6)
     print(name," is at position",curPos," and rolled :" ,d)
     d = curPos + d
-    if d > 30:
+    if d > totalColumn:
         return curPos
     else:
         return d
@@ -37,7 +37,7 @@ while start:
         players[k] = newPos
         time.sleep(1)  
         
-        if newPos ==30:
+        if newPos ==totalColumn:
             print("***** ",k," wins!! *****")
             start=False
             break
