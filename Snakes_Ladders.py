@@ -1,3 +1,4 @@
+"""basic snakes and ladders game -> Manoj Pathak"""
 from random import randint
 import time
 
@@ -8,7 +9,7 @@ snakes  = {27:1,19:7,21:9,17:4}
 totalColumn = 30
 
 """Initialising players and their positions"""
-players = {"Manoj":0,"Vansh":0,"Manish":0,"Saket":0,"Anoop":0}
+players = {"player1":0,"player2":0,"player3":0,"player4":0,"player5":0}
 
 def roll_dice(name, curPos):
     d = randint(1,6)
@@ -41,3 +42,5 @@ while start:
             print("***** ",k," wins!! *****")
             start=False
             break
+
+
